@@ -1,0 +1,14 @@
+<h1>Url</h1>
+
+<form action="/urls" method="post">
+  Url
+  <input type="text" name="url"><br><br>
+  <button type="submit">Convert</button>
+</form>
+<br>
+
+<% @url_list.each do |x| %>
+	<%= x.original_url %>
+	<a href="/<%= "#{x.short_url}"%>"><%= x.short_url%></a>
+	<br>
+<% end %>
